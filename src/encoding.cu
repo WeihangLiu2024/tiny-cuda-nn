@@ -167,6 +167,7 @@ void register_encoding(const std::string& name, const std::function<Encoding<T>*
 template <typename T>
 Encoding<T>* create_encoding(uint32_t n_dims_to_encode, const json& encoding, uint32_t alignment) {
 	// Calls register_builtin_encodings<T>() on first invocation of create_encoding<T>(...)
+	print("edition validated!");
 	// in a thread-safe manner and ensures all concurrent calls progress further only
 	// once register_builtin_encodings<T>() terminated. See the C++ documentation on static
 	// local variables for more information.
